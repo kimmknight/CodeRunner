@@ -10,6 +10,10 @@ Various projects/upgrades will become available as you progress.
 
 You can play the game at https://kimmknight.github.io/CodeRunner
 
+## Images
+
+![image](https://github.com/kimmknight/CodeRunner/assets/45035595/3c0cb750-71ad-4c16-9bab-12c905fb9dd6)
+
 ## About
 
 Code Runner is an evolution of my previous project [Horse Racer](https://kimmknight.github.io/HorseRacer/) which is a tribute to the 1986 Mac game *Horse Race*.
