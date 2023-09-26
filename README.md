@@ -1,6 +1,5 @@
-![image](https://github.com/kimmknight/CodeRunner/assets/45035595/ba098e6a-c36e-43dd-b1ee-f6ca3838c76d)
 
-# Code Runner
+### ![](images/horserun.gif) Code Runner
 
 Code Runner is a horse race betting game where you write JavaScript code to bet on horses and win cash.
 
@@ -8,15 +7,15 @@ Your aim is make as much cash as possible by writing the best code possible to w
 
 Various projects/upgrades will become available as you progress.
 
-## Play
+#### Play
 
 You can play the game at https://kimmknight.github.io/CodeRunner
 
-## Images
+#### Images
 
-![image](https://github.com/kimmknight/CodeRunner/assets/45035595/3c0cb750-71ad-4c16-9bab-12c905fb9dd6)
+![Screenshot](images/screenshot.png)
 
-## About
+#### About
 
 Code Runner is an evolution of my previous project [Horse Racer](https://kimmknight.github.io/HorseRacer/) which is a tribute to the 1986 Mac game *Horse Race*.
 
@@ -26,7 +25,7 @@ Currently, there are only a limited number of projects/upgrades. I would like to
 
 I am also still tweaking parameters relating to speed and randomness to try and make the game well balanced.
 
-## Help
+#### Help
 
 There is a Getting Started Guide and Quick Reference available in-game.
 
