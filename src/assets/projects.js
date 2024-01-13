@@ -16,9 +16,9 @@ export default [
     {
         title: "Automate",
         description: "Installs the AutoRace feature. When one race finishes, another starts automatically.",
-        requirementsText: "100 races completed",
+        requirementsText: "50 races completed",
         requirements: function(game) {
-            return game.history.raceCount >= 100;
+            return game.history.raceCount >= 50;
         },
         showRequirements: function(game) {
             return !game.story.autoRaceAvailable && (game.history.raceCount >= 10);
@@ -124,7 +124,7 @@ export default [
             return game.history.raceCount >= 80;
         },
         showRequirements: function(game) {
-            return !game.story.skipDrugTesting && game.history.raceCount >= 40;
+            return !game.story.skipDrugTesting && game.story.autoRaceAvailable;
         },
         effect: function(game) {
             game.story.skipDrugTesting = true;
