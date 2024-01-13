@@ -51,7 +51,9 @@
             <div class="row masonry">
                 <div class="col-lg-6">
                     <div class="p-3 border bg-white rounded mb-4 w-100 position-relative">
-                        <span class="position-absolute end-0 mx-2 h4" v-if="game.race.bets.length > 0 && game.race.status == 1">🤍</span>
+                        <span class="position-absolute end-0 mx-2 h2 heartbeat" v-if="game.race.bets.length > 0 && game.race.status == 1">❤</span>
+                        <span class="position-absolute end-0 mx-2 h2" v-if="game.race.bets.length > 0 && game.race.status == 2 && game.history.recent[game.history.recent.length - 1].outcome > 0">💚</span>
+                        <span class="position-absolute end-0 mx-2 h2" v-if="game.race.bets.length > 0 && game.race.status == 2 && game.history.recent[game.history.recent.length - 1].outcome < 0">💔</span>
                         <h4>Racetrack:</h4>
                         <div v-for="(horseNumber, index) in game.race.racingHorses" class="d-flex align-items-center">
                             <div class="me-3 text-dark" style="font-size: x-small">{{ index }}</div>
@@ -166,7 +168,7 @@
                                 <button
                                     class="btn border rounded p-2 my-1 d-flex flex-column align-items-center bg-light w-100"
                                     v-if="project.showRequirements(game)" :disabled="!project.requirements(game)"
-                                    @click="project.effect(game)">
+                                    @click="project.effect(game); log('\'' + project.title + '\' project completed.')">
                                     <span>
                                         <b>{{ project.title }}</b>
                                         <span v-if="project.requirementsText"> ({{ project.requirementsText }})</span>
@@ -1193,4 +1195,23 @@ export default {
 .log-container {
     max-height: 6em;
     /* overflow-y: scroll; */
-}</style>
+}
+
+.heartbeat {
+    animation: pulse 0.35s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.85);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.85);
+    }
+}
+</style>
